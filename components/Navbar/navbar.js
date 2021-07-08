@@ -1,13 +1,19 @@
+import Link from "next/link";
+
 const Navbar = () => {
   return (
-    <div>
+    <nav>
       <div className="logo">Duyen</div>
-      <nav>
+      <Link href="/">
         <a>Home</a>
+      </Link>
+      <Link href="/about">
         <a>About</a>
+      </Link>
+      <Link href="/girls">
         <a>Girls</a>
-      </nav>
-    </div>
+      </Link>
+    </nav>
   );
 };
 
