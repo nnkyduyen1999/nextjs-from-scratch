@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../../styles/Girls.module.css";
 
 export const getStaticProps = async () => {
@@ -14,11 +15,11 @@ export const getStaticProps = async () => {
 const Girls = ({ cats }) => {
   const renderCats = (list) => {
     return list.map((cat) => (
-      <div key={cat.id}>
+      <Link key={cat.id} href={`/girls/` + cat.id}>
         <a className={styles.single}>
           <h5>{cat.name}</h5>
         </a>
-      </div>
+      </Link>
     ));
   };
 
